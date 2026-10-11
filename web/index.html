@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Orioles Hot Stove Desk</title>
+<meta name="theme-color" content="#DF4601">
+<meta name="description" content="2026–27 Orioles Hot Stove desk for Boyd — Camden night aesthetic, EXAMPLE offseason board, franchise lore. Offline.">
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div class="ember-glow" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="brand">
+    <span class="crest" aria-hidden="true">
+      <svg viewBox="0 0 64 64" width="52" height="52">
+        <defs>
+          <linearGradient id="orG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#FF6A1A"/><stop offset="1" stop-color="#DF4601"/>
+          </linearGradient>
+          <radialGradient id="orGlow" cx="50%" cy="40%" r="55%">
+            <stop offset="0" stop-color="#FF8A3D"/><stop offset="1" stop-color="#DF4601"/>
+          </radialGradient>
+        </defs>
+        <circle cx="32" cy="32" r="30" fill="#0a0a0a" stroke="url(#orG)" stroke-width="3"/>
+        <circle cx="32" cy="32" r="22" fill="url(#orGlow)" opacity=".92"/>
+        <path d="M20 38c4-14 10-22 12-24 2 2 8 10 12 24-4-3-8-4-12-4s-8 1-12 4z" fill="#0a0a0a" opacity=".85"/>
+        <circle cx="28" cy="28" r="2.2" fill="#fff"/><circle cx="36" cy="28" r="2.2" fill="#fff"/>
+        <path d="M26 34c2 2.5 4 3 6 3s4-.5 6-3" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <div>
+      <h1>Orioles Hot Stove Desk</h1>
+      <p class="sub">Camden Yards night · 2026–27 offseason · Millersville, MD</p>
+    </div>
+  </div>
+  <div class="topmeta">
+    <span class="pill hot">🔥 Hot Stove</span>
+    <span class="pill soft" id="seasonPill">2026 · 79–82 · EXAMPLE board</span>
+    <button type="button" id="btnWall" class="ghost" title="Wall display mode">🖥 Wall</button>
+    <button type="button" id="btnHelp" class="ghost" title="About this desk">❓</button>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Hot Stove screens">
+  <button type="button" role="tab" class="tab on" data-tab="home" aria-selected="true">🏠 Home</button>
+  <button type="button" role="tab" class="tab" data-tab="timeline" aria-selected="false">📅 Timeline</button>
+  <button type="button" role="tab" class="tab" data-tab="roster" aria-selected="false">♟ Roster Chess</button>
+  <button type="button" role="tab" class="tab" data-tab="memory" aria-selected="false">🏟 Camden Memory</button>
+  <button type="button" role="tab" class="tab" data-tab="fan" aria-selected="false">📝 Fan Desk</button>
+</nav>
+
+<main class="stage">
+  <!-- HOME -->
+  <section id="panel-home" class="panel on" role="tabpanel">
+    <div class="hero-stove">
+      <div class="stove-banner">2026–27 HOT STOVE</div>
+      <h2 class="hero-title">Orange glow over Eutaw Street</h2>
+      <p class="hero-lead">
+        A winter fireplace desk for lifelong Orioles fans — Camden night palette, franchise lore,
+        and a clearly labeled <b>EXAMPLE</b> offseason board. No invented WAR, salaries, trades-as-fact, or injuries.
+      </p>
+      <div class="hero-chips">
+        <div class="hchip"><span class="h-lab">Last season</span><span class="h-val">79–82</span><span class="h-note">on-disk Stats API cache · Oct 2026</span></div>
+        <div class="hchip"><span class="h-lab">AL East</span><span class="h-val">4th</span><span class="h-note">18.5 GB · research notes</span></div>
+        <div class="hchip"><span class="h-lab">Home</span><span class="h-val">Camden</span><span class="h-note">Opened 1992</span></div>
+        <div class="hchip"><span class="h-lab">Titles</span><span class="h-val">3</span><span class="h-note">1966 · 1970 · 1983</span></div>
+      </div>
+      <p class="disclaimer">Season chips paraphrase <code>orioles-2026/data</code> + <code>ij_*</code> research already on this box — not live MLB. Speculative cards elsewhere are marked EXAMPLE.</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="card glow">
+        <h3>🔥 Stove status</h3>
+        <p>Typical MLB calendar: GM Meetings → Winter Meetings → arbitration → Spring Training. This desk tracks <em>windows</em>, not breaking news.</p>
+        <button type="button" class="primary sm" data-goto="timeline">Open timeline →</button>
+      </article>
+      <article class="card">
+        <h3>♟ Roster chess</h3>
+        <p>EXAMPLE position slots only. Pin private “watch” notes in localStorage — never presented as real 2026 roster claims.</p>
+        <button type="button" class="ghost sm" data-goto="roster">Open board →</button>
+      </article>
+      <article class="card">
+        <h3>🏟 Memory lane</h3>
+        <p>Verified franchise lore: World Series years, Cal’s streak, Camden’s brick warehouse skyline.</p>
+        <button type="button" class="ghost sm" data-goto="memory">Browse lore →</button>
+      </article>
+    </div>
+
+    <div class="panel-head tight">
+      <h2>EXAMPLE speculation wall</h2>
+      <span class="badge-ex">EXAMPLE ONLY · not rumors-as-fact</span>
+    </div>
+    <div class="rumor-row" id="rumorRow"></div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="panel-timeline" class="panel" role="tabpanel" hidden>
+    <div class="panel-head">
+      <h2>Offseason Timeline</h2>
+      <p class="note">Typical MLB calendar <b>windows</b> — not invented Orioles announcements. Tap a milestone for detail.</p>
+    </div>
+    <div class="tl-wrap">
+      <div class="tl-rail" aria-hidden="true"></div>
+      <ol class="timeline" id="timeline" role="list"></ol>
+    </div>
+    <article class="card tl-detail" id="tlDetail">
+      <h3 id="tlTitle">Select a milestone</h3>
+      <div id="tlBody" class="tl-body"></div>
+    </article>
+  </section>
+
+  <!-- ROSTER -->
+  <section id="panel-roster" class="panel" role="tabpanel" hidden>
+    <div class="panel-head">
+      <h2>Roster Chess</h2>
+      <p class="note"><b>EXAMPLE</b> 26-man / 40-man style slots by position group. Click a slot to pin a private watch note. Does <em>not</em> claim any real 2026 roster.</p>
+    </div>
+    <div class="roster-toolbar">
+      <div class="seg" role="group" aria-label="Roster view">
+        <button type="button" class="seg-btn on" data-board="26">26-man EXAMPLE</button>
+        <button type="button" class="seg-btn" data-board="40">40-man EXAMPLE</button>
+      </div>
+      <button type="button" id="btnClearWatches" class="ghost sm">Clear my watches</button>
+    </div>
+    <div class="board" id="rosterBoard"></div>
+    <aside class="watch-drawer card" id="watchDrawer" hidden>
+      <h3 id="watchTitle">Watch note</h3>
+      <p class="muted" id="watchSlotMeta"></p>
+      <textarea id="watchText" rows="4" maxlength="400" placeholder="Private note — saved only in this browser…"></textarea>
+      <div class="row-actions">
+        <button type="button" id="btnSaveWatch" class="primary sm">Save</button>
+        <button type="button" id="btnCancelWatch" class="ghost sm">Close</button>
+      </div>
+    </aside>
+  </section>
+
+  <!-- MEMORY -->
+  <section id="panel-memory" class="panel" role="tabpanel" hidden>
+    <div class="panel-head">
+      <h2>Camden Memory</h2>
+      <p class="note">Franchise lore cards — verified public history only (WS titles, Ripken streak, park opening).</p>
+    </div>
+    <div class="filter-row" id="memoryFilters">
+      <button type="button" class="chip on" data-filter="all">All</button>
+      <button type="button" class="chip" data-filter="titles">Titles</button>
+      <button type="button" class="chip" data-filter="legends">Legends</button>
+      <button type="button" class="chip" data-filter="park">Park</button>
+      <button type="button" class="chip" data-filter="culture">Culture</button>
+    </div>
+    <div class="memory-grid" id="memoryGrid"></div>
+  </section>
+
+  <!-- FAN -->
+  <section id="panel-fan" class="panel" role="tabpanel" hidden>
+    <div class="panel-head">
+      <h2>Fan Desk</h2>
+      <p class="note">Your winter wishlist + freeform notes (localStorage). Official Orioles links only — no affiliate shopping.</p>
+    </div>
+    <div class="fan-grid">
+      <article class="card">
+        <h3>Things I want this winter</h3>
+        <ul class="checklist" id="wishlist"></ul>
+        <div class="add-row">
+          <input type="text" id="wishInput" maxlength="120" placeholder="Add a wish…" aria-label="New wishlist item">
+          <button type="button" id="btnAddWish" class="primary sm">Add</button>
+        </div>
+      </article>
+      <article class="card">
+        <h3>Freeform notes</h3>
+        <textarea id="fanNotes" rows="10" maxlength="4000" placeholder="Drafts, questions for the stove, Camden daydreams…"></textarea>
+        <div class="row-actions">
+          <button type="button" id="btnSaveNotes" class="primary sm">Save notes</button>
+          <span class="muted" id="notesSaved"></span>
+        </div>
+      </article>
+    </div>
+    <article class="card links-card">
+      <h3>Official &amp; public links</h3>
+      <ul class="link-list" id="linkList"></ul>
+    </article>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>Port 4286 · 127.0.0.1 · offline · not affiliated with MLB / Baltimore Orioles</span>
+  <span id="clock"></span>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<dialog id="helpDlg">
+  <form method="dialog" class="help-box">
+    <h2>About Hot Stove Desk</h2>
+    <p>Built for Christopher Boyd — lifelong Orioles fan, Millersville / Baltimore area. Orange/black Camden night aesthetic with a winter fireplace particle field.</p>
+    <ul>
+      <li>No invented WAR, salaries, trade rumors-as-fact, or injury reports.</li>
+      <li>Timeline uses typical MLB calendar windows.</li>
+      <li>Roster Chess is EXAMPLE slots + your private notes.</li>
+      <li>Memory cards stick to well-known public franchise history.</li>
+      <li>Season chips cite on-box <code>orioles-2026</code> / <code>ij_*</code> research when present.</li>
+    </ul>
+    <button type="submit" class="primary">Got it</button>
+  </form>
+</dialog>
+
+<script>/*__APP__*/</script>
+</body>
+</html>
