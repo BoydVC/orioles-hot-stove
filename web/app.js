@@ -260,7 +260,7 @@
     { id: "w1", text: "Catch an Opening Day vibe plan (tickets / TV)", done: false },
     { id: "w2", text: "Re-read a classic Orioles season book / doc", done: false },
     { id: "w3", text: "Walk Eutaw Street next time downtown", done: false },
-    { id: "w4", text: "Teach Vic / Char one Camden lore story", done: false },
+    { id: "w4", text: "Teach Sam / Alex one Camden lore story", done: false },
   ];
 
   const LINKS = [
