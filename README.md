@@ -1,6 +1,6 @@
 # Orioles Hot Stove Desk 🔥🧡
 
-**Camden Yards night Hot Stove desk for Boyd** — lifelong Orioles fan, Millersville / Baltimore area. Orange (`#DF4601`) / black / white winter fireplace UI for the **2026–27 offseason**: timeline windows, EXAMPLE roster chess, franchise lore, and a private fan wishlist. Offline single-file HTML. **No invented WAR, salaries, trade rumors-as-fact, or injury reports.**
+**Camden Yards night Hot Stove desk for Alex** — lifelong Orioles fan, Lakeside / Baltimore area. Orange (`#DF4601`) / black / white winter fireplace UI for the **2026–27 offseason**: timeline windows, EXAMPLE roster chess, franchise lore, and a private fan wishlist. Offline single-file HTML. **No invented WAR, salaries, trade rumors-as-fact, or injury reports.**
 
 * **Open:** double-click `dist/orioles-hot-stove.html`, or `./run.sh` → http://127.0.0.1:4286/
 * **Best screenshot:** `screenshots/00-best-home.png`
@@ -42,6 +42,6 @@ Port **4286** · binds 127.0.0.1 only · stdlib Python · no CDN / analytics · 
 
 ---
 ## Repo notes
-- **Built:** Oct 2026 (TokenMax build week; see SHORTLIST/ledger), by TokenMax (Boyd's Grok Bot) on the Grok Bot box.
+- **Built:** Oct 2026 (TokenMax build week; see SHORTLIST/ledger), by TokenMax (Alex's Grok Bot) on the Grok Bot box.
 - **Run:** `./run.sh` (then open the localhost URL it prints).
 - Imported from `/workspace/tokenmax/orioles-hot-stove` on Oct 23, 2026. node_modules, virtualenvs, logs and files over 20 MB were left out.
